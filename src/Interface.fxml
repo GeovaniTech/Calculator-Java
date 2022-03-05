@@ -32,21 +32,50 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfaceController">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+
+<AnchorPane maxHeight="482.0" maxWidth="368.0" minHeight="416.0" minWidth="368.0" prefHeight="416.0" prefWidth="368.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="44.0" prefWidth="368.0" style="-fx-background-color: #211d19;">
          <children>
-            <Text layoutX="227.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" New Project" wrappingWidth="185.8193359375">
+            <Text fill="WHITE" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator">
                <font>
-                  <Font name="Century Gothic" size="30.0" />
+                  <Font name="Century Gothic" size="15.0" />
                </font>
             </Text>
          </children>
-    </AnchorPane>
-  </children>
-</VBox>
+      </AnchorPane>
+      <AnchorPane layoutY="44.0" prefHeight="90.0" prefWidth="368.0" style="-fx-background-color: #464646;">
+         <children>
+            <Text fill="WHITE" layoutX="10.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="348.9830722808838">
+               <font>
+                  <Font name="Century Gothic" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="C" />
+      <Button layoutX="90.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #595959; -fx-background-image: url('file:C:\Users\Geovani Debastiani\OneDrive\Folders\Development\News\Calculator-Java\src\Images\excluir_menor.png');" text="⌫" />
+      <Button layoutX="182.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #595959;" text="\%" />
+      <Button layoutX="278.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="+" />
+      <Button layoutX="278.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="-" />
+      <Button layoutX="278.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="*" />
+      <Button layoutX="278.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="/" />
+      <Button layoutX="278.0" layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" text="=" />
+      <Button layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="7" />
+      <Button layoutX="90.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="8" />
+      <Button layoutX="182.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="9" />
+      <Button layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="4" />
+      <Button layoutX="90.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="5" />
+      <Button layoutX="182.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="6" />
+      <Button layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="1" />
+      <Button layoutX="90.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="2" />
+      <Button layoutX="182.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="3" />
+      <Button layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="182.0" style="-fx-background-color: #333333;" text="0" />
+      <Button layoutX="182.0" layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="," />
+   </children>
+</AnchorPane>

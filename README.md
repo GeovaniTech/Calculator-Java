@@ -1,3 +1,3 @@
-# Calculator with Java
+## Calculator with Java
 
-## Developing a Simple Operations Calculator with Java.
+### Developing a Simple Operations Calculator with Java.
