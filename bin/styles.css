@@ -1,0 +1,39 @@
+.button
+{
+-fx-background-color : #333333;
+-fx-border-color: #4d4d4d4d;
+-fx-text-fill:  #FFF;
+-fx-border-radius: 0 0 0 0;
+-fx-background-radius: 0 0 0 0;
+}
+.button:hover
+{
+-fx-background-color : #646464;
+}
+
+.button:pressed
+{
+-fx-background-color : #747474 ;
+}
+
+#buttonsFuncions {
+    -fx-background-color : #595959;
+}
+
+#buttonsFuncions:hover {
+    -fx-background-color : #696969;
+
+}
+
+#buttonsFuncions:pressed {
+    -fx-background-color : #797979;
+
+}
+
+#igual {
+    -fx-background-color : #2196F3;
+}
+
+#igual:hover {
+    -fx-background-color : rgb(34, 159, 255);
+}

@@ -32,13 +32,13 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="482.0" maxWidth="368.0" minHeight="416.0" minWidth="368.0" prefHeight="416.0" prefWidth="368.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="482.0" maxWidth="368.0" minHeight="413.0" minWidth="368.0" prefHeight="413.0" prefWidth="368.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="44.0" prefWidth="368.0" style="-fx-background-color: #211d19;">
          <children>
@@ -51,31 +51,35 @@
       </AnchorPane>
       <AnchorPane layoutY="44.0" prefHeight="90.0" prefWidth="368.0" style="-fx-background-color: #464646;">
          <children>
-            <Text fill="WHITE" layoutX="10.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="348.9830722808838">
+            <Text fx:id="txtResult" fill="WHITE" layoutX="10.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="348.9830722808838">
                <font>
                   <Font name="Century Gothic" size="40.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
-      <Button layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="C" />
-      <Button layoutX="90.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #595959; -fx-background-image: url('file:C:\Users\Geovani Debastiani\OneDrive\Folders\Development\News\Calculator-Java\src\Images\excluir_menor.png');" text="⌫" />
-      <Button layoutX="182.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #595959;" text="\%" />
-      <Button layoutX="278.0" layoutY="134.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="+" />
-      <Button layoutX="278.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="-" />
-      <Button layoutX="278.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="*" />
-      <Button layoutX="278.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #595959;" text="/" />
-      <Button layoutX="278.0" layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" text="=" />
-      <Button layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="7" />
-      <Button layoutX="90.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="8" />
-      <Button layoutX="182.0" layoutY="190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="9" />
-      <Button layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="4" />
-      <Button layoutX="90.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="5" />
-      <Button layoutX="182.0" layoutY="246.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="6" />
-      <Button layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="90.0" style="-fx-background-color: #333333;" text="1" />
-      <Button layoutX="90.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="92.0" style="-fx-background-color: #333333;" text="2" />
-      <Button layoutX="182.0" layoutY="302.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="3" />
-      <Button layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="182.0" style="-fx-background-color: #333333;" text="0" />
-      <Button layoutX="182.0" layoutY="358.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #333333;" text="," />
+      <Button id="buttonsFuncions" fx:id="btnClear" layoutY="134.0" mnemonicParsing="false" onAction="#clickClear" prefHeight="56.0" prefWidth="90.0" text="C" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="NW_RESIZE" />
+         </cursor>
+      </Button>
+      <Button id="buttonsFuncions" fx:id="btnBack" layoutX="90.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickBack" prefHeight="56.0" prefWidth="92.0" text="⌫" textFill="WHITE" />
+      <Button id="buttonsFuncions" fx:id="btnResto" layoutX="182.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickResto" prefHeight="56.0" prefWidth="96.0" text="\%" textFill="WHITE" />
+      <Button id="buttonsFuncions" fx:id="btnSomar" defaultButton="true" layoutX="278.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickSoma" prefHeight="56.0" prefWidth="90.0" text="+" textFill="WHITE" />
+      <Button id="buttonsFuncions" fx:id="btnDiminuir" layoutX="278.0" layoutY="190.0" mnemonicParsing="false" onAction="#clickSub" prefHeight="56.0" prefWidth="90.0" text="-" textFill="WHITE" />
+      <Button id="buttonsFuncions" fx:id="btnMult" layoutX="278.0" layoutY="246.0" mnemonicParsing="false" onAction="#clickMult" prefHeight="56.0" prefWidth="90.0" text="*" textFill="WHITE" />
+      <Button id="buttonsFuncions" fx:id="btnDivisao" layoutX="278.0" layoutY="302.0" mnemonicParsing="false" onAction="#clickDivi" prefHeight="56.0" prefWidth="90.0" text="/" textFill="WHITE" />
+      <Button id="igual" fx:id="btnIgual" layoutX="278.0" layoutY="358.0" mnemonicParsing="false" onAction="#clickIgual" prefHeight="56.0" prefWidth="90.0" text="=" textFill="WHITE" />
+      <Button fx:id="btn7" layoutY="190.0" mnemonicParsing="false" onAction="#click7" prefHeight="56.0" prefWidth="90.0" stylesheets="@styles.css" text="7" textFill="WHITE" />
+      <Button fx:id="btn8" layoutX="90.0" layoutY="190.0" mnemonicParsing="false" onAction="#click8" prefHeight="56.0" prefWidth="92.0" stylesheets="@styles.css" text="8" textFill="WHITE" />
+      <Button fx:id="btn9" layoutX="182.0" layoutY="190.0" mnemonicParsing="false" onAction="#click9" prefHeight="56.0" prefWidth="96.0" stylesheets="@styles.css" text="9" textFill="WHITE" />
+      <Button fx:id="btn4" layoutY="246.0" mnemonicParsing="false" onAction="#click4" prefHeight="56.0" prefWidth="90.0" text="4" textFill="WHITE" />
+      <Button fx:id="btn5" layoutX="90.0" layoutY="246.0" mnemonicParsing="false" onAction="#click5" prefHeight="56.0" prefWidth="92.0" text="5" textFill="WHITE" />
+      <Button fx:id="btn6" layoutX="182.0" layoutY="246.0" mnemonicParsing="false" onAction="#click6" prefHeight="56.0" prefWidth="96.0" text="6" textFill="WHITE" wrapText="true" />
+      <Button fx:id="btn1" layoutY="302.0" mnemonicParsing="false" onAction="#click1" prefHeight="56.0" prefWidth="90.0" text="1" textFill="WHITE" />
+      <Button fx:id="btn2" layoutX="90.0" layoutY="302.0" mnemonicParsing="false" onAction="#click2" prefHeight="56.0" prefWidth="92.0" text="2" textFill="WHITE" />
+      <Button fx:id="btn3" layoutX="182.0" layoutY="302.0" mnemonicParsing="false" onAction="#click3" prefHeight="56.0" prefWidth="96.0" text="3" textFill="WHITE" />
+      <Button fx:id="btn0" layoutY="358.0" mnemonicParsing="false" onAction="#click0" prefHeight="56.0" prefWidth="182.0" text="0" textFill="WHITE" />
+      <Button fx:id="btnVirgula" layoutX="182.0" layoutY="358.0" mnemonicParsing="false" onAction="#clickVirgula" prefHeight="56.0" prefWidth="96.0" text="," textFill="WHITE" />
    </children>
 </AnchorPane>

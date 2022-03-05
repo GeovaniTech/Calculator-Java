@@ -15,7 +15,8 @@ public class App extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Interface.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Scene tela = new Scene(root);
-            
+            tela.getStylesheets().add("styles.css");
+
             primaryStage.setTitle("Calculator by Geovani Debastiani");
             primaryStage.setScene(tela);
             primaryStage.show();        
