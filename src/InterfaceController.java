@@ -1,9 +1,31 @@
+import java.util.Arrays;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 public class InterfaceController {
+    public static String verifications(String text, int number) {
+        String[] operators = {"/", "*", "-", "+", "%"};
+
+        String lastCharacter = text.substring(text.length() - 1);
+
+        int pos = Arrays.binarySearch(operators, lastCharacter);
+
+        if (pos > 0) {
+            return "" + text + " " + number;
+        }
+
+        else {
+            if (text != "0") {
+                return "" + text + number;
+            }
+            return "" + number;
+        }
+        
+    }
+
+
 
     @FXML
     private Button btn0;
@@ -67,97 +89,139 @@ public class InterfaceController {
 
     @FXML
     void click0(ActionEvent event) {
+        String text = txtResult.getText();
 
+        String verification = verifications(text, 0);
+
+
+        
     }
 
     @FXML
     void click1(ActionEvent event) {
+        String text = txtResult.getText();
 
+        String verification = verifications(text, 1);
+
+        txtResult.setText("" + verification);
     }
 
     @FXML
     void click2(ActionEvent event) {
+        String text = txtResult.getText();
+        
 
     }
 
     @FXML
     void click3(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void click4(ActionEvent event) {
+        String text = txtResult.getText();
 
+        
     }
 
     @FXML
     void click5(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void click6(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void click7(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void click8(ActionEvent event) {
+        String text = txtResult.getText();
 
+        
     }
 
     @FXML
     void click9(ActionEvent event) {
+        String text = txtResult.getText();
 
+        
     }
 
     @FXML
     void clickBack(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickClear(ActionEvent event) {
-
+        txtResult.setText("0");
     }
 
     @FXML
     void clickDivi(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickIgual(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickMult(ActionEvent event) {
+        String text = txtResult.getText();
+
+
 
     }
 
     @FXML
     void clickResto(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickSoma(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickSub(ActionEvent event) {
+        String text = txtResult.getText();
+
 
     }
 
     @FXML
     void clickVirgula(ActionEvent event) {
+        String text = txtResult.getText();
 
+        
     }
 
 }
