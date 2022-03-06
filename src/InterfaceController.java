@@ -207,7 +207,7 @@ public class InterfaceController {
         
         String lastCharacter = text.substring(text.length() - 1);
 
-        if (lastCharacter != "" && lastCharacter != ".")
+        if (lastCharacter != " " && lastCharacter != ".")
             txtResult.setText(text + " / ");
     }
 
@@ -222,7 +222,10 @@ public class InterfaceController {
     void clickMult(ActionEvent event) {
         String text = txtResult.getText();
 
+        String lastCharacter = text.substring(text.length() - 1);
 
+        if (lastCharacter != "" && lastCharacter != ".")
+            txtResult.setText(text + " * ");
 
     }
 
@@ -230,20 +233,32 @@ public class InterfaceController {
     void clickResto(ActionEvent event) {
         String text = txtResult.getText();
 
+        String lastCharacter = text.substring(text.length() - 1);
+
+        if (lastCharacter != "" && lastCharacter != ".")
+            txtResult.setText(text + " % ");
 
     }
 
     @FXML
     void clickSoma(ActionEvent event) {
         String text = txtResult.getText();
+        
+        String lastCharacter = text.substring(text.length() - 1);
 
+        if (lastCharacter != "" && lastCharacter != ".")
+            txtResult.setText(text + " + ");
 
     }
 
     @FXML
     void clickSub(ActionEvent event) {
         String text = txtResult.getText();
+        
+        String lastCharacter = text.substring(text.length() - 1);
 
+        if (lastCharacter != "" && lastCharacter != ".")
+            txtResult.setText(text + " - ");
 
     }
 
