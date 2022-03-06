@@ -12,21 +12,24 @@ public class InterfaceController {
 
         int pos = Arrays.binarySearch(operators, lastCharacter);
 
-        if (pos > 0) {
-            return "" + text + " " + number;
+        if (text == "0") {
+            return "" + number;
         }
 
         else {
-            if (text != "0") {
+            if (pos > 0) {
+                return "" + text + " " + number;
+            }
+
+            else {
                 return "" + text + number;
             }
-            return "" + number;
         }
+
+        
         
     }
-
-
-
+  
     @FXML
     private Button btn0;
 
@@ -93,7 +96,7 @@ public class InterfaceController {
 
         String verification = verifications(text, 0);
 
-
+        txtResult.setText("" + verification);
         
     }
 
@@ -110,56 +113,72 @@ public class InterfaceController {
     void click2(ActionEvent event) {
         String text = txtResult.getText();
         
+        String verification = verifications(text, 2);
 
+        txtResult.setText("" + verification);
     }
 
     @FXML
     void click3(ActionEvent event) {
         String text = txtResult.getText();
+        
+        String verification = verifications(text, 3);
 
-
+        txtResult.setText("" + verification);
     }
 
     @FXML
     void click4(ActionEvent event) {
         String text = txtResult.getText();
-
         
+        String verification = verifications(text, 4);
+
+        txtResult.setText("" + verification); 
     }
 
     @FXML
     void click5(ActionEvent event) {
         String text = txtResult.getText();
 
+        String verification = verifications(text, 5);
 
+        txtResult.setText("" + verification); 
     }
 
     @FXML
     void click6(ActionEvent event) {
         String text = txtResult.getText();
 
+        String verification = verifications(text, 6);
 
+        txtResult.setText("" + verification); 
     }
 
     @FXML
     void click7(ActionEvent event) {
         String text = txtResult.getText();
 
+        String verification = verifications(text, 7);
 
+        txtResult.setText("" + verification); 
     }
 
     @FXML
     void click8(ActionEvent event) {
         String text = txtResult.getText();
 
-        
+        String verification = verifications(text, 8);
+
+        txtResult.setText("" + verification); 
     }
 
     @FXML
     void click9(ActionEvent event) {
         String text = txtResult.getText();
 
-        
+        String verification = verifications(text, 9);
+
+        txtResult.setText("" + verification); 
     }
 
     @FXML
