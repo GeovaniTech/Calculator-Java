@@ -5,31 +5,32 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 public class InterfaceController {
+    static int n = 0;
     public static String verifications(String text, int number) {
         String[] operators = {"/", "*", "-", "+", "%"};
+
+        
+
+        if (n == 0) {
+            n += 1;
+            return "" + number;
+            
+        }
 
         String lastCharacter = text.substring(text.length() - 1);
 
         int pos = Arrays.binarySearch(operators, lastCharacter);
-
-        if (text == "0") {
-            return "" + number;
-        }
-
-        else {
-            if (pos > 0) {
-                return "" + text + " " + number;
-            }
-
-            else {
-                return "" + text + number;
-            }
-        }
-
         
+        System.out.print(lastCharacter);
+
+        if (pos > 0) {
+            return "" + text + " " + number;
+        }
+        else {
+            return "" + text + number;
+        }
         
     }
-  
     @FXML
     private Button btn0;
 
@@ -185,19 +186,29 @@ public class InterfaceController {
     void clickBack(ActionEvent event) {
         String text = txtResult.getText();
 
-
+        if (text.length() == 1) {
+            txtResult.setText("0");
+            n = 0;
+        }
+        else {
+            txtResult.setText(text.substring(0, text.length() - 1));
+        }
     }
 
     @FXML
     void clickClear(ActionEvent event) {
         txtResult.setText("0");
+        n = 0;
     }
 
     @FXML
     void clickDivi(ActionEvent event) {
         String text = txtResult.getText();
+        
+        String lastCharacter = text.substring(text.length() - 1);
 
-
+        if (lastCharacter != "" && lastCharacter != ".")
+            txtResult.setText(text + " / ");
     }
 
     @FXML
@@ -239,6 +250,7 @@ public class InterfaceController {
     @FXML
     void clickVirgula(ActionEvent event) {
         String text = txtResult.getText();
+
 
         
     }
