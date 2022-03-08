@@ -266,8 +266,20 @@ public class InterfaceController {
     void clickVirgula(ActionEvent event) {
         String text = txtResult.getText();
 
+        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
+        String lastCharacter = text.substring(text.length() - 1);
+
+        try {
+            Integer value = Integer.parseInt(lastCharacter);
+
+            int pos = Arrays.binarySearch(numbers, value);
+            
+        } catch (Exception e) {
+            txtResult.setText("" + text);
+        }
         
+
     }
 
 }
