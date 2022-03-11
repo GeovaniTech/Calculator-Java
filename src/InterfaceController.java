@@ -1,4 +1,8 @@
+import java.security.Principal;
 import java.util.Arrays;
+
+import javax.swing.plaf.multi.MultiButtonUI;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,8 +12,6 @@ public class InterfaceController {
     static int n = 0;
     public static String verifications(String text, int number) {
         String[] operators = {"/", "*", "-", "+", "%"};
-
-        
 
         if (n == 0) {
             n += 1;
@@ -24,13 +26,31 @@ public class InterfaceController {
         System.out.print(lastCharacter);
 
         if (pos > 0) {
-            return "" + text + " " + number;
+            return "" + text + number;
         }
         else {
             return "" + text + number;
         }
         
     }
+
+    public static String verficationsOperators(String CurrentText, String operator) {
+        String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+        String lastCharacter = CurrentText.substring(CurrentText.length() - 1);
+
+        int pos = Arrays.binarySearch(numbers, lastCharacter);
+
+        if (pos > 0) {
+            return CurrentText + operator;
+        }
+
+        else {
+            return CurrentText;
+        }
+    }
+
+
     @FXML
     private Button btn0;
 
@@ -204,39 +224,28 @@ public class InterfaceController {
     @FXML
     void clickDivi(ActionEvent event) {
         String text = txtResult.getText();
-        
-        String lastCharacter = text.substring(text.length() - 1);
 
-        if (lastCharacter != " " && lastCharacter != ".")
-            txtResult.setText(text + " / ");
+        txtResult.setText(verficationsOperators(text, "/"));
     }
-
+        
     @FXML
     void clickIgual(ActionEvent event) {
         String text = txtResult.getText();
-
-
     }
 
     @FXML
     void clickMult(ActionEvent event) {
         String text = txtResult.getText();
 
-        String lastCharacter = text.substring(text.length() - 1);
-
-        if (lastCharacter != "" && lastCharacter != ".")
-            txtResult.setText(text + " * ");
+        txtResult.setText(verficationsOperators(text, "*"));
 
     }
 
     @FXML
     void clickResto(ActionEvent event) {
         String text = txtResult.getText();
-
-        String lastCharacter = text.substring(text.length() - 1);
-
-        if (lastCharacter != "" && lastCharacter != ".")
-            txtResult.setText(text + " % ");
+        
+        txtResult.setText(verficationsOperators(text, "%"));
 
     }
 
@@ -244,10 +253,7 @@ public class InterfaceController {
     void clickSoma(ActionEvent event) {
         String text = txtResult.getText();
         
-        String lastCharacter = text.substring(text.length() - 1);
-
-        if (lastCharacter != "" && lastCharacter != ".")
-            txtResult.setText(text + " + ");
+        txtResult.setText(verficationsOperators(text, "+"));
 
     }
 
@@ -255,10 +261,7 @@ public class InterfaceController {
     void clickSub(ActionEvent event) {
         String text = txtResult.getText();
         
-        String lastCharacter = text.substring(text.length() - 1);
-
-        if (lastCharacter != "" && lastCharacter != ".")
-            txtResult.setText(text + " - ");
+        txtResult.setText(verficationsOperators(text, "-"));
 
     }
 
@@ -266,19 +269,15 @@ public class InterfaceController {
     void clickVirgula(ActionEvent event) {
         String text = txtResult.getText();
 
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
         String lastCharacter = text.substring(text.length() - 1);
 
-        try {
-            Integer value = Integer.parseInt(lastCharacter);
+        String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
-            int pos = Arrays.binarySearch(numbers, value);
-            
-        } catch (Exception e) {
-            txtResult.setText("" + text);
-        }
+        int pos = Arrays.binarySearch(numbers, lastCharacter);
         
+        if (pos > 0) {
+            txtResult.setText(text + ".");
+        }
 
     }
 
