@@ -1,8 +1,10 @@
-import java.security.Principal;
 import java.util.Arrays;
 
-import javax.swing.plaf.multi.MultiButtonUI;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptEngine;
+import javax.script.ScriptException;
 
+import javafx.beans.binding.Binding;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,7 +18,6 @@ public class InterfaceController {
         if (n == 0) {
             n += 1;
             return "" + number;
-            
         }
 
         String lastCharacter = text.substring(text.length() - 1);
@@ -231,6 +232,12 @@ public class InterfaceController {
     @FXML
     void clickIgual(ActionEvent event) {
         String text = txtResult.getText();
+
+        ScriptEngineManager mrq = new ScriptEngineManager();
+        ScriptEngine engine = mrq.getEngineByName("JavaScript");
+
+        
+
     }
 
     @FXML
