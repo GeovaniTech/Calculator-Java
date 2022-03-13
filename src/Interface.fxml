@@ -80,6 +80,6 @@
       <Button fx:id="btn2" layoutX="90.0" layoutY="302.0" mnemonicParsing="false" onAction="#click2" prefHeight="56.0" prefWidth="92.0" text="2" textFill="WHITE" />
       <Button fx:id="btn3" layoutX="182.0" layoutY="302.0" mnemonicParsing="false" onAction="#click3" prefHeight="56.0" prefWidth="96.0" text="3" textFill="WHITE" />
       <Button fx:id="btn0" layoutY="358.0" mnemonicParsing="false" onAction="#click0" prefHeight="56.0" prefWidth="182.0" text="0" textFill="WHITE" />
-      <Button fx:id="btnVirgula" layoutX="182.0" layoutY="358.0" mnemonicParsing="false" onAction="#clickVirgula" prefHeight="56.0" prefWidth="96.0" text="," textFill="WHITE" />
+      <Button fx:id="btnVirgula" layoutX="182.0" layoutY="358.0" mnemonicParsing="false" onAction="#clickVirgula" prefHeight="56.0" prefWidth="96.0" text="." textFill="WHITE" />
    </children>
 </AnchorPane>

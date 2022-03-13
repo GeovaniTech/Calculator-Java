@@ -34,8 +34,11 @@ public class InterfaceController {
         String lastCharacter = CurrentText.substring(CurrentText.length() - 1);
 
         int pos = Arrays.binarySearch(numbers, lastCharacter);
+        System.out.println(pos);
 
-        if (pos > 0) {
+
+
+        if (pos >= 0) {
             return CurrentText + operator;
         }
 
@@ -226,8 +229,11 @@ public class InterfaceController {
     void clickIgual(ActionEvent event) {
         String text = txtResult.getText();
 
-        txtResult.setText("" + Eval.me(text));
-
+        try {
+            txtResult.setText("" + Eval.me(text));
+        } catch (Exception e) {
+            txtResult.setText(text);
+        }
     }
 
     @FXML
@@ -272,7 +278,7 @@ public class InterfaceController {
 
         int pos = Arrays.binarySearch(numbers, lastCharacter);
         
-        if (pos > 0) {
+        if (pos >= 0) {
             txtResult.setText(text + ".");
         }
 
