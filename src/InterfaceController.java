@@ -1,10 +1,5 @@
 import java.util.Arrays;
-
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptEngine;
-import javax.script.ScriptException;
-
-import javafx.beans.binding.Binding;
+import groovy.util.Eval;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,8 +18,6 @@ public class InterfaceController {
         String lastCharacter = text.substring(text.length() - 1);
 
         int pos = Arrays.binarySearch(operators, lastCharacter);
-        
-        System.out.print(lastCharacter);
 
         if (pos > 0) {
             return "" + text + number;
@@ -233,10 +226,7 @@ public class InterfaceController {
     void clickIgual(ActionEvent event) {
         String text = txtResult.getText();
 
-        ScriptEngineManager mrq = new ScriptEngineManager();
-        ScriptEngine engine = mrq.getEngineByName("JavaScript");
-
-        
+        txtResult.setText("" + Eval.me(text));
 
     }
 
