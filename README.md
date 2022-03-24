@@ -1,4 +1,4 @@
-## Calculator with Java
+## ForMath - Calculator with Java
 
 ### Developing a Simple Operations Calculator with Java.
 
