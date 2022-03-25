@@ -1,5 +1,7 @@
 ## ForMath - Calculator with Java
 
+> Status: Finished&#x2714;
+
 ### Developing a Simple Operations Calculator with Java.
 
 ## Presentation
